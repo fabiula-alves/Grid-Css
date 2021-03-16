@@ -1,0 +1,227 @@
+.grid {
+  display: grid;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+}
+.grid-template-areas{
+  grid-template-columns: 90px auto auto;
+  grid-template-rows: 60px 520px 50px;
+  grid-template-areas: 
+  "logo nav nav" 
+  "content content content" 
+  "footer footer footer" 
+  ;
+}
+/*--------------------------*/
+/*-----------Logo-----------*/
+/*--------------------------*/
+.logo{
+  grid-area: logo;
+  padding: 5px;
+}
+#imglogo{
+  width: 60px;
+  height: 50px;
+}
+/*--------------------------*/
+/*------------Nav-----------*/
+/*--------------------------*/
+.nav{
+  grid-area: nav;
+  background-color: rgb(218, 10, 72);
+}
+/*--------------------------*/
+/*------Content-------------*/
+/*--------------------------*/
+.content{
+  grid-area: content;
+}
+.subgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 10px;
+}
+#box1, #box2, #box3, #box4{
+  height: 240px;
+  width: 240px;
+}
+.item{
+  align-items: center;
+}
+#texto{
+  font-size: 20px;
+}
+h1{
+  text-align: center;
+  font-size: 85px;
+}
+#box1{
+  background-color: coral;
+  color: coral;
+  
+  transition-property: background-color, border-radius, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+#box1:hover{
+  background-color: cornflowerblue;
+  color: black;
+  border-radius: 50%;
+}
+#box2{
+  background-color: rgb(255, 223, 80);
+  color:  rgb(255, 223, 80);
+  transition-property: background-color, border-radius, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+#box2:hover{
+  background-color: cornflowerblue;
+  color: black;
+  border-radius: 50%;
+}
+#box3{
+  background-color: rgb(80, 255, 138);
+  color: rgb(80, 255, 138);
+  transition-property: background-color, border-radius, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+#box3:hover{
+  background-color: cornflowerblue;
+  color: black;
+  border-radius: 50%;
+}
+#box4{
+  background-color: rgb(162, 80, 255);
+  color: rgb(162, 80, 255);
+  transition-property: background-color, border-radius, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+#box4:hover{
+  background-color: cornflowerblue;
+  color: black;
+  border-radius: 50%;
+}
+/*--------------------------*/
+/*------ Footer-------------*/
+/*--------------------------*/
+.footer{
+  grid-area: footer;
+  background-color:  rgb(10, 218, 218);
+}
+#textfooter1{
+  font-size: 13px;
+  font-family: serif;
+  text-align: center;
+}
+/*------------------------------------------*/
+/*------------- Responsividade--------------*/
+/*------------------------------------------*/
+@media (max-width: 700px){
+  .grid-template-areas{
+    grid-template-columns: 90px auto auto;
+  grid-template-rows: 60px 500px 50px;
+    grid-template-areas: 
+    "logo nav nav" 
+    "content content content"
+    "footer footer footer"
+    ;
+  }
+  /*--------------------*/
+  /*-------Logo---------*/
+  /*--------------------*/
+  .logo{
+    grid-area: logo;
+  }
+  /*--------------------*/
+  /*--------Nav---------*/
+  /*--------------------*/
+  .nav{
+    grid-area: nav;
+  }
+  /*--------------------*/
+  /*------Contente------*/
+  /*--------------------*/
+  .content{
+    grid-area: content;
+  }
+  #box1, #box2, #box3, #box4{
+    height: 80px;
+    width: 220px;
+  }
+  .subgrid{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    margin: 0 auto;
+  }
+  #texto{
+    font-size: 18px;
+  }
+  h1{
+    text-align: center;
+    font-size: 25px;
+  }
+  /*-------------------*/
+  /*------Footer-------*/
+  /*-------------------*/
+  .footer{
+    grid-area: footer;
+  }
+}
+/*--------------------------------------------------------*/
+/*--------------Otros dispositivos - Tablet---------------*/
+/*--------------------------------------------------------*/
+@media (min-width: 701px) and (max-width: 1200px){
+  .grid-template-areas{
+    grid-template-columns: 90px auto auto;
+  grid-template-rows: 60px 520px 50px;
+    grid-template-areas: 
+    "logo nav nav" 
+    "content content content"
+    "footer footer footer"
+    ;
+  }
+  /*---------------------*/
+  /*-------Logo----------*/
+    /*---------------------*/
+  .logo{
+    grid-area: logo;
+  }
+  /*---------------------*/
+  /*---------Nav---------*/
+  /*---------------------*/
+  .nav{
+    grid-area: nav;
+  }
+  /*---------------------*/
+  /*------Content--------*/
+  /*---------------------*/
+  .content{
+    grid-area: content;
+  }
+  #box1, #box2, #box3, #box4{
+    height: 120px;
+    width: 120px;
+  }
+  .subgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+  }
+  #texto{
+    font-size: 20px;
+  }
+  h1{
+    text-align: center;
+    font-size: 45px;
+  }
+  /*---------------------*/
+  /*--------Footer-------*/
+  /*---------------------*/
+  .footer{
+    grid-area: footer;
+  }
+  
+}
